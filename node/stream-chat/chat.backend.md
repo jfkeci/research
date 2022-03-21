@@ -51,6 +51,8 @@ This creates a new Stream Chat user and a token that can be used with Stream Cha
 ![Getstream - app explorer - db](./chat.assets/stream-chat-db-new-user.png)
 
 
+### 2. Stream Chat user login example
+
 ```javascript
 async login (dto: LoginUserDTO){
         const { username, password } = dto;
@@ -72,6 +74,9 @@ async login (dto: LoginUserDTO){
         throw new ConflictException('Invalid credentials');
 }
 ```
+
+This check if the user exists in getstream app db and returns a token that can be used with Stream Chat client app
+
 
 
 
